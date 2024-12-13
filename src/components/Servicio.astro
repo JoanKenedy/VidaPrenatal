@@ -1,0 +1,260 @@
+---
+interface Props {
+	title: string;
+	punto1: string;
+  punto2: string;
+  punto3: string;
+  punto4: string;
+  punto5: string;
+  punto6: string;
+
+	img: string;
+  transition?: string
+
+  infoDesplegable1: string;
+  infoDesplegable2: string;
+}
+
+const { title, punto1, punto2, punto3, punto4, punto5, punto6, img, infoDesplegable1, infoDesplegable2, transition } = Astro.props;
+
+---
+
+<section class="hero-container" id="inicio">
+  <h2>{title}</h2>
+  <hr class="subrayado">
+  <div class="container-materno">
+    <img src={img} alt="Imagen Presentación" class='ImgPre' transition:name={transition}/>
+    <ul class="container-list" id="container-list">
+      <li>{punto1}</li>
+      <li>{punto2}</li>
+      <li>{punto3}</li>
+      <li>{punto4}</li>
+      <li>{punto5}</li>
+      <li>{punto6}</li>
+    </ul>
+  </div>
+  <div class="why">
+    <h2>{infoDesplegable2}</h2>
+    <p>{infoDesplegable1}</p>
+    <slot />
+  </div>
+	<!-- Cambios 
+	<h2>{subtitle2}</h2>
+  <hr class="subrayado">
+	<div class="container-info">
+		<ul class="menu-info">
+			<li class="btn-menu select" id="uno"><a>{info1}</a></li>
+			<li class="btn-menu" id="dos"><a>{info2}</a></li>
+		</ul>
+		<div class="container-desplegable view" id="parte-1">
+			<p></p>
+			<ul>
+				<li>{infoDesplegable1}</li>
+				<li>{infoDesplegable2}</li>
+				<li>{infoDesplegable3}</li>
+			</ul>
+			<img src={img3} alt="">
+		</div>
+    <div class="container-desplegable" id="parte-2">
+			<p></p>
+			<ul>
+				<li>{infoDesplegable4}</li>
+				<li>{infoDesplegable5}</li>
+				<li>{infoDesplegable6}</li>
+			</ul>
+			<img src={img4} alt="">
+		</div>
+	</div>
+</section>
+
+<!-- Estilos -->
+<style>
+  @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+  .hero-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 6%;
+  }
+  .hero-container .ImgPre {
+    width: 100%;
+    height: auto;
+    border-radius: 40px;
+    margin: 15px 0 35px 0;
+  }
+  .subrayado {
+    border: 2px solid;
+    width: 70%;
+    color: blueviolet;
+    margin: 0 0 10px 0;
+    text-align: center;
+  }
+  .hero-container h2, .hero-container h3, .why h2 {
+    color: var(--morado-title);
+    text-align: center;
+		font-weight: bolder;
+  }
+  .hero-container h2 {
+    margin-top: 20px;
+  }
+  .hero-container p {
+    text-align: justify;
+  }
+  .why {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 550px;
+  }
+	.menu-info {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		margin: 10px;
+		text-align: center;
+    padding: 0;
+	}
+	.btn-menu {
+		margin: 10px 0;
+		list-style: none;
+    border-bottom: 3px rgba(143, 101, 161, 0.24) solid;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+	}
+  .menu-info li:hover {
+    border-bottom: 3px rgb(143,101,161) solid;
+    transition: all 0.3s ease-in-out;
+  }
+	.menu-info a {
+		text-decoration: none;
+		color: black;
+	}
+  .container-list {
+    list-style: none;
+  }
+  .container-list li {
+    margin-bottom: 5px;
+  }
+  @keyframes show {
+    from {
+      opacity: 0;
+      scale: 25%;
+    }
+    to {
+      opacity: 1;
+      scale: 100%;
+    }
+  }
+  .why button {
+    padding: 12px 16px;
+    background-color: var(--rosa);
+    border-radius: 15px;
+    color: white;
+    border-style: none;
+    transition: all 0.3s ease-in-out;
+  }
+  .why button:hover {
+    background-color: var(--morado);
+    transition: all 0.3s ease-in-out;
+  }
+  .conoce-des, .conoce-mov {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .conoce-des {
+    display: none;
+  }
+  .container-desplegable {
+    display: none;
+    transition: all 0.3s ease-in-out;
+  }
+  .container-desplegable li {
+    margin-top: 10px;
+  }
+  .container-desplegable ul {
+    list-style:none;
+  }
+  .container-desplegable li::before {
+    content: "\F415";
+    font-family: 'bootstrap-icons';
+    margin-right: 8px;
+    color: var(--rosa);
+  }
+  .view {
+    display: block;
+    transition: all 0.3s ease-in-out;
+  }
+  .select {
+    border-bottom: 3px rgb(143,101,161) solid;
+    transition: all 0.3s ease-in-out;
+  }
+  @media (min-width: 768px) {
+    .menu-info {
+      flex-direction: row;
+    }
+    .why h2 {
+      font-size: 2.8rem;
+    }
+    .btn-menu:nth-child(1) {
+      margin-right: 35px;
+    }
+    .container-desplegable {
+      justify-content: center;
+      align-items: center;
+    }
+    .hero-container .container-desplegable .ImgPre {
+      width: 50%;
+      height: auto;
+      margin-left: 30px;
+    }
+    .view {
+      display: flex;
+    }
+    .btn-menu {
+      padding-bottom: 10px;
+    }
+    .conoce-des {
+      display: flex;
+    }
+    .conoce-mov {
+      display: none;
+    }
+    .container-materno {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .hero-container {
+      padding: 30px 6% 6% 6%;
+    }
+    .hero-container .container-materno .ImgPre {
+      width: 50%;
+      height: auto;
+      margin-right: 25px;
+    }
+    .hero-container p {
+      font-size: 1.3em;
+    }
+    .hero-container .container-why .ImgPre {
+      width: 50%;
+      height: auto;
+      margin-left: 25px;
+    }
+    .container-why {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: row-reverse;
+    }
+    .container-why p {
+      margin-top: 15px;
+    }
+  }
+</style>

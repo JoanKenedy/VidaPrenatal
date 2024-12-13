@@ -1,0 +1,38 @@
+---
+import Layout from '../layouts/Layout.astro';
+import NavbarMovil from '../components/NavbarMovil.astro'
+import Footer from '../components/Footer.astro';
+import Ubicacion from '../components/Ubicacion.astro';
+import RedesFlotantes from '../components/RedesFlotantes.astro';
+import Servicio from '../components/Servicio.astro';
+import Up from '../components/Up.astro';
+import Contacto2 from '../components/Contacto2.astro';
+import Loader from '../components/Loader.astro';
+---
+
+<Layout 
+      title="ADN Fetal - Dra. Janeth Adriana García Cid"
+      url='https://vidaprenatal-maternofetal-ginecologia.mx/adn-fetal'
+      description='Permite conocer si existe la posibilidad de presentar alguna alteración genética fetal durante el embarazo a través de una muestra sanguínea materna.'>
+	<main id="inicio">
+    <Loader />
+		<NavbarMovil/>
+    <Servicio 
+      img='/servicio/adn-1.webp'
+      title='¿Qué detecta esta prueba?' 
+      punto1='❤ Permite conocer si existe la posibilidad de presentar alguna alteración genética fetal durante el embarazo a través de una muestra sanguínea materna.' 
+      punto2='' 
+      punto3=''
+      punto4=''
+      punto5=''
+      punto6=''
+      infoDesplegable1=''
+      infoDesplegable2=''
+    />
+    <Contacto2 />
+		<Ubicacion/>
+		<RedesFlotantes/>
+    <Up />
+		<Footer/>
+	</main>
+</Layout>

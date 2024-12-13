@@ -1,0 +1,361 @@
+
+<div class="container-nav">
+  <div class="navbar-mov">
+    <img src='/logo-hor2.webp' alt='Logo Vida Prenatal' class="logoImg" id='logo'/>
+    <a id="btn-menu" class="btn-menu">
+      <i class="bi bi-list"></i>
+    </a>
+    <a id="btn-close" class="btn-menu btn-menu-close" style="display: none;">
+      <i class="bi bi-x-lg"></i>
+    </a>
+    <div class="menu-desktop">
+      <a href="/" class="overlay-item">Inicio</a>
+      <a href="/Trayectoria" class="overlay-item">Conóceme</a>
+      <div class="dropdown">
+        <button
+          class="btn desk dropdown-toggle"
+          type="button"
+          id="dropdownMenuButton"
+          data-mdb-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Servicios
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <li>
+            <a class="dropdown-item" href="#">
+              <i class="bi bi-caret-left"></i> Ultrasonidos Especializados
+            </a>
+            <ul class="dropdown-menu dropdown-submenu dropdown-submenu-left">
+              <li>
+                <a class="dropdown-item" href="/USG-11">USG Génetico de Primer Trimestre 11-14 sdg</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/USG-segundo-trimestre">USG Estructural Segundo Trimestre 18-24 sdg</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/USG-crecimiento">USG Crecimiento </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/USG-doppler">Ultrasonido Doppler</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/USG-gemelos">Ultrasonidos de Embarazos Gemelares</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/USG-3D-4D-5D">USG 3D, 4D, 5D</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/revelacion-sexo">Revelación de Sexo Fetal</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">
+              <i class="bi bi-caret-left"></i> Procedimientos
+            </a>
+            <ul class="dropdown-menu dropdown-submenu dropdown-submenu-left">
+              <li>
+                <a class="dropdown-item" href="/Amniocentesis">Amniocentesis</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/Biopsia-vellosidades">Biopsia De Vellosidades Coriales</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">
+              <i class="bi bi-caret-left"></i> Estudios Sanguíneos Especiales
+            </a>
+            <ul class="dropdown-menu dropdown-submenu dropdown-submenu-left">
+              <li>
+                <a class="dropdown-item" href="/Duo-test">Dúo Test</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/adn-fetal">ADN Fetal</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">
+              <i class="bi bi-caret-left"></i> Seguimiento del Embarazo
+            </a>
+            <ul class="dropdown-menu dropdown-submenu dropdown-submenu-left">
+              <li>
+                <a class="dropdown-item" href="/control-prenatal">Control Prenatal</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/embarazos-de-alto-riesgo">Embarazos de Bajo y Alto Riesgo</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/parto">Atención de Parto</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/Cesarea">Cesárea</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <a href="/Ginecologia" class="overlay-item">Ginecología</a>
+      <a href="/Promociones" class="overlay-item">Promociones</a>
+      <a href="#ubicacion" class="overlay-item">Ubicación</a>
+      <button class="button-tel"><a href="tel:5511119365" target="_blank">5511119365</a></button>
+    </div>
+  </div>
+</div>
+<div class="overlay-menu" id="overlay-menu">
+  <a href="/" class="overlay-item">Inicio</a>
+  <a href="/Trayectoria" class="overlay-item">Conóceme</a>
+  <a href="/#servicios" class="overlay-item" id="btn-close-2">Servicios</a>
+  <a href="/Ginecologia" class="overlay-item">Ginecología</a>
+  <a href="/Promociones" class="overlay-item">Promociones</a>
+  <a href="#ubicacion" class="overlay-item" id="btn-close-1">Ubicación</a>
+  <a href="tel:5511119365" class="overlay-item">5511119365</a>
+  <div class="rs">
+    <a target="_blank" href="https://www.facebook.com/profile.php?id=61550929773630">
+      <i class="bi bi-facebook"></i>
+    </a>
+    <a target="_blank" href="https://www.instagram.com/vidaprenatal_maternofetal/">
+      <i class="bi bi-instagram"></i>
+    </a>
+  </div>
+</div>
+
+<!--Estilos-->
+<style>
+  .dropdown-menu li {
+    position: relative;
+  }
+  .dropdown-menu .dropdown-submenu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: -7px;
+  }
+  .dropdown-menu .dropdown-submenu-left {
+    right: 100%;
+    left: auto;
+  }
+  .dropdown-menu > li:hover > .dropdown-submenu {
+    display: block;
+  }
+  .dropdown:hover>.dropdown-menu {
+    display: block;
+  }
+  .dropdown-menu {
+    border: 2px var(--rosa) solid;
+  }
+  .dropdown-item:hover {
+    background-color: var(--verde-agua-claro);
+    transition: all 0.1s linear;
+  }
+  .dropdown>.dropdown-toggle:active {
+    /*Without this, clicking will make it sticky*/
+      pointer-events: none;
+  }
+  .container-nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(144, 212, 198, 0.493);
+  }
+  .navbar-mov {
+    height: 100px;
+    display: flex;
+    width: 100%;
+    max-width: 1440px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navbar-mov .logoImg {
+    max-width: 200px;
+    height: auto;
+    margin-left: 5%;
+    cursor: pointer;
+  }
+  .btn-menu {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: var(--rosa);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5%;
+    text-align: center;
+  }
+  .btn-menu-close  {
+    background-color: var(--morado);
+  }
+  .btn-menu i {
+    font-size: 35px;
+    color: white;
+  }
+  .overlay-menu {
+    position: absolute;
+    background-color: rgba(164,204,196,0.9);
+    top: 100px;
+    right: 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    width: 0;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 99;
+    transition: all 0.5s ease 0s;
+  }
+  .overlay-menu .overlay-item {
+    text-decoration: none;
+    color: black;
+    padding: 10px 0 10px 0;
+    font-size: 20px;
+  }
+  .overlay-menu .rs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .overlay-menu .rs .bi-facebook {
+    margin-right: 15px;
+    color: blue;
+    font-size: 35px;
+  }
+  .overlay-menu .rs .bi-instagram {
+    color: var(--rosa);
+    font-size: 35px;
+  }
+  .menu-desktop {
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .menu-desktop .overlay-item {
+    text-decoration: none;
+    color: black;
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+  .menu-desktop .button-tel a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+  }
+  .menu-desktop .button-tel {
+    border-style: none;
+    background-color: var(--rosa);
+    border-radius: 15px;
+    padding: 5px 10px 5px 10px;
+    margin-right: 10px;
+    display: inline-block;
+  }
+  .menu-desktop .desk:hover {
+    background-color: var(--rosa-claro);
+    transition: all 0.5s linear;
+  }
+  .menu-desktop .button-tel:hover {
+    background-color: var(--morado);
+    transition: all 0.5s linear;
+  }
+  .menu-desktop .overlay-item:hover {
+    transition: all 0.3s ease-in-out;
+    background-color: var(--rosa-claro);
+  }
+  /*Keyframes */
+  @keyframes open {   /*Animacion de la imagen primero es transparente al25}% del tamaño y va creciendo */
+    from {
+      opacity: 0;
+      scale: 25%;
+    }
+    to {
+      opacity: 1;
+      scale: 100%;
+    }
+  }
+  /*Media query's */
+  @media (min-width: 425px) {
+    .navbar-mov .logoImg {
+      max-width: 300px;
+      height: auto;
+    }
+  }
+  @media (min-width: 1024px) {
+    .menu-desktop {
+      display: flex;
+    }
+    .btn-menu, .btn-menu-close {
+      display: none;
+    }
+    .navbar-mov .logoImg {
+      margin-left: 10px;
+      max-width: 230px;
+      height: auto;
+    }
+    .menu-desktop {
+      justify-content: space-evenly;
+    }
+    .menu-desktop .button-tel a {
+      font-size: 20px;
+    }
+    .menu-desktop .button-tel {
+      padding: 10px 15px 10px 15px;
+      border-radius: 20px;
+      transition: all 0.5s linear;
+    }
+    .navbar-mov {
+      justify-content: space-between;
+    }
+  }
+  @media (min-width: 1270px) {
+    .navbar-mov {
+      padding: 0 30px 0 30px;
+    } 
+    .navbar-mov .logoImg {
+      max-width: 350px;
+      height: auto;
+      margin-left: 10px;
+      padding: 0 30px;
+    }
+    .menu-desktop .overlay-item {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .menu-desktop .desk {
+      font-size: 18px !important;
+      font-weight: bold !important;
+    }
+  }
+</style>
+
+<!--Scripts-->
+<script>
+  const abrir = document.getElementById("btn-menu");
+  abrir.addEventListener('click', openMenu);
+  const cerrar = document.getElementById("btn-close");
+  cerrar.addEventListener('click', closeMenu);
+  const closeM = document.getElementById("btn-close-1");
+  closeM.addEventListener('click', closeMenu);
+  const closeMe = document.getElementById("btn-close-2");
+  closeMe.addEventListener('click', closeMenu);
+  function openMenu() {
+    document.getElementById("overlay-menu").style.width = "100%";
+    document.getElementById("btn-menu").style.display = "none";
+    document.getElementById("btn-close").style.display = "block";
+    document.getElementById("btn-close").style.animation = "open 0.5s ease-in-out";
+  }
+  function closeMenu() {
+    document.getElementById("overlay-menu").style.width = "0";
+    document.getElementById("btn-menu").style.display = "block";
+    document.getElementById("btn-menu").style.animation = "open 0.5s ease-in-out";
+    document.getElementById("btn-close").style.display = "none";
+  }
+
+  const logo = document.getElementById('logo')
+  logo.addEventListener('click', () => {
+    location.href = '/'
+  })
+</script>

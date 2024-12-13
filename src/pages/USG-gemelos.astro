@@ -1,0 +1,44 @@
+---
+import Layout from '../layouts/Layout.astro';
+import NavbarMovil from '../components/NavbarMovil.astro'
+import Footer from '../components/Footer.astro';
+import Ubicacion from '../components/Ubicacion.astro';
+import RedesFlotantes from '../components/RedesFlotantes.astro';
+import Servicio from '../components/Servicio.astro';
+import Up from '../components/Up.astro';
+import Contacto2 from '../components/Contacto2.astro';
+import Testimonios from '../components/Testimonios.astro';
+import Loader from '../components/Loader.astro';
+ 
+---
+
+<Layout url='https://vidaprenatal-maternofetal-ginecologia.mx/USG-gemelos' title="USG de Embarazos Gemelares - Dra. Janeth Adriana García Cid" description=' Evaluación de la corionicidad, es decir  si se trata de un  embarazo gemelar con una placenta  en la que ambos gemelos la comparten o bien dos placentas, una para cada gemelo, ya que de acuerdo a ello será la vigilancia en estos embarazos'>
+	<main id="inicio">
+    <Loader />
+		<NavbarMovil/>
+    <Servicio 
+      title='¿Qué se realiza en el ultrasonido de estos embarazos?' 
+      punto1='❤ Evaluación de la corionicidad, es decir  si se trata de un  embarazo gemelar con una placenta  en la que ambos gemelos la comparten o bien dos placentas, una para cada gemelo, ya que de acuerdo a ello será la vigilancia en estos embarazos'  
+      punto2='❤ Si son embarazos gemelares con una sola placenta, la evaluación y el seguimiento deberá ser más estrecho, ya que que hay mayor riesgo de complicaciones en estos embarazos.' 
+      punto3='❤ La ecografía es el mejor método diagnóstico no sólo para identificar una gestación gemelar, sino también para catalogarla y especificar su corionicidad (número de placentas) y su amniocidad (número de bolsas).' 
+      punto4=''
+      punto5=''
+      punto6=''
+      img='/servicio/usg-gemelar/ultrasonido-3.webp'
+      infoDesplegable1='Todas las pacientes con embarazos gemelares deben ser evaluadas por un médico especializado y altamente capacitado, como un médico materno fetal'.
+      infoDesplegable2='Importante'
+    />
+    <Testimonios 
+      img1='/servicio/usg-gemelar/ultrasonido-1.webp'
+      img2='/servicio/usg-gemelar/ultrasonido-2.webp'
+      img3='/servicio/usg-gemelar/Imagen3.webp'
+      img4='/servicio/usg-gemelar/Imagen4.webp'
+      img5='/servicio/usg-gemelar/Imagen5.webp'
+    />
+    <Contacto2 />
+		<Ubicacion/>
+		<RedesFlotantes/>
+    <Up />
+		<Footer/>
+	</main>
+</Layout>

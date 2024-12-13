@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import NavbarMovil from '../components/NavbarMovil.astro'
+import Footer from '../components/Footer.astro';
+import Ubicacion from '../components/Ubicacion.astro';
+import RedesFlotantes from '../components/RedesFlotantes.astro';
+import Servicio from '../components/Servicio.astro';
+import Up from '../components/Up.astro';
+import Contacto2 from '../components/Contacto2.astro';
+import Loader from '../components/Loader.astro';
+ 
+---
+
+  <Layout 
+    title="Biopsia de Vellosidades Coriales - Dra. Janeth Adriana García Cid"
+    url='https://vidaprenatal-maternofetal-ginecologia.mx/Biopsia-vellosidades'
+    description='La biopsia corial es un procedimiento de diagnóstico prenatal, mediante la obtención y posterior estudio genético de vellosidades coriales de la placenta.''>
+	<main id="inicio">
+    <Loader />
+		<NavbarMovil/>
+    <Servicio 
+      title='¿En qué consiste esta prueba?' 
+      punto1='❤ La biopsia corial es un procedimiento de diagnóstico prenatal, mediante la obtención y posterior estudio genético de vellosidades coriales de la placenta.' 
+      punto2='❤ Permite el diagnóstico de enfermedades como Síndrome de Down' 
+      punto3='' 
+      punto4='' 
+      punto5=''
+      punto6=''     
+      img='/servicio/biopsia.webp'
+      infoDesplegable1='Esta prueba solo deberá ser realizado por un médico especializado y altamente capacitado, como un médico materno fetal.'
+      infoDesplegable2='Importante'
+    />
+    <Contacto2 />
+		<Ubicacion/>
+		<RedesFlotantes/>
+    <Up />
+		<Footer/>
+	</main>
+</Layout>

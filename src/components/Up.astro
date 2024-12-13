@@ -1,0 +1,60 @@
+<div class="button-up" id="subir">
+  <a><i class="bi bi-chevron-up"></i></a>
+</div>
+
+
+<!-- Estilos -->
+<style>
+  .button-up {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  .button-up a {
+    background-color: var(--morado);
+    border-style: none;
+    border-color: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .button-up i {
+    color: white;
+    font-size: 25px;
+  }
+  @media (min-width: 768px) {
+    .button-up i {
+      font-size: 30px;
+    }
+    .button-up a {
+      width: 50px;
+      height: 50px;
+    }
+  }
+</style>
+
+<script>
+  const subir = document.getElementById('subir')
+
+  subir?.addEventListener('click', () => {
+    window.scrollTo(0, 0);
+  })
+  const y = window.scrollY
+  if (y<=90) {
+    subir.style.opacity = '0'
+  }
+  window.onscroll = () => {
+    const y = window.scrollY
+    //console.log(y)
+    if (y<=90) {
+      subir.style.opacity = '0'
+    } else {
+      subir.style.opacity = '1'
+    }
+  }
+</script>

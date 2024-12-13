@@ -1,0 +1,89 @@
+---
+import Layout from '../layouts/Layout.astro';
+import NavbarMovil from '../components/NavbarMovil.astro'
+import Footer from '../components/Footer.astro';
+import Ubicacion from '../components/Ubicacion.astro';
+import RedesFlotantes from '../components/RedesFlotantes.astro';
+import Servicio from '../components/Servicio.astro';
+import Up from '../components/Up.astro';
+import Contacto2 from '../components/Contacto2.astro';
+import riesgo from "../img/servicios/embarazo-riesgo.jpg";
+import Loader from '../components/Loader.astro';
+ 
+---
+
+<Layout url='https://vidaprenatal-maternofetal-ginecologia.mx/embarazos-de-alto-riesgo' title="Embarazos de Bajo y Alto Riesgo - Dra. Janeth Adriana García Cid" description='Es aquel que tiene más posibilidades de complicaciones, tanto desde el punto de vista de la madre como para él bebe, y por lo tanto merece un control más estricto durante el transcurso de la gestación, parto y postparto.'>
+	<main id="inicio">
+    <Loader />
+		<NavbarMovil/>
+    <Servicio 
+      title='¿Qué es un embarazo de alto riesgo?'  
+      punto1='❤ Es aquel que tiene más posibilidades de complicaciones, tanto desde el punto de vista de la madre como para él bebe, y por lo tanto merece un control más estricto durante el transcurso de la gestación, parto y postparto.'
+      punto2='❤ Un embarazo de alto riesgo es aquel que pone en riesgo la salud o la vida de la madre o del feto. Es necesario atención de personal altamente capacitado. Algunos embarazos se vuelven de alto riesgo a medida que progresan, mientras que algunas mujeres tienen mayor riesgo de tener complicaciones incluso antes de quedar embarazadas, por diversas razones. Los cuidados prenatales regulares desde el inicio del embarazo ayudan a muchas mujeres a tener embarazos saludables y partos sin complicaciones.'
+      punto3=''
+      punto4=''
+      punto5=''
+      punto6=''
+      img='/servicios/embarazo-riesgo.webp'
+      infoDesplegable1=''
+      infoDesplegable2=''
+      transition='Riesgo'
+    >
+    <h4>¿Cuáles son algunos de los factores que hacen que un embarazo sea de alto riesgo?</h4>
+    <div class="container-list">
+      <ul>
+        <li>❤ Condiciones de salud existentes</li>
+        <li>❤ Hipertensión</li>
+        <li>❤ Diabetes</li>
+        <li>❤ Nefropatía. Enfermedad renal</li>
+        <li>❤ Enfermedades autoinmune (lupus eritematoso sitémico)</li>
+        <li>❤ Enfermedades de la tiroides</li>
+        <li>❤ Obesidad</li>
+        <li>❤ Edad</li>
+        <li>❤ Madres adolescentes</li>
+        <li>❤ Embarazos por primera vez después de los 35 años</li>
+      </ul>
+      <ul>
+        <li>❤ Factores de estilo de vida</li>
+        <li>❤ Consumo de alcohol</li>
+        <li>❤ Consumo de tabaco</li>
+        <li>❤ Consumo de drogas</li>
+        <li>❤ Condiciones del embarazo</li>
+        <li>❤ Embarazo gemelar</li>
+        <li>❤ Diabetes gestacional</li>
+        <li>❤ Preeclampsia</li>
+        <li>❤ Parto pretermino previo</li>
+        <li>❤ Defectos congénitos del feto</li>
+      </ul>
+    </div>
+    </Servicio>
+    <Contacto2 />
+		<Ubicacion/>
+		<RedesFlotantes/>
+    <Up />
+		<Footer/>
+	</main>
+</Layout>
+
+<style>
+  ul {
+    list-style: none;
+    margin-bottom: 0;
+  }
+  h4 {
+    font-weight: bold;
+    color: var(--morado-title);
+    text-align: center;
+  }
+  .container-list {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  @media (min-width: 768px) {
+    .container-list {
+      flex-direction: row;
+    }
+  }
+</style>

@@ -1,0 +1,70 @@
+---
+import Layout from '../layouts/Layout.astro';
+import NavbarMovil from '../components/NavbarMovil.astro'
+import Footer from '../components/Footer.astro';
+import Ubicacion from '../components/Ubicacion.astro';
+import RedesFlotantes from '../components/RedesFlotantes.astro';
+import Servicio from '../components/Servicio.astro';
+import Up from '../components/Up.astro';
+import Contacto2 from '../components/Contacto2.astro';
+import Testimonios from '../components/Testimonios.astro';
+import Loader from '../components/Loader.astro';
+ 
+---
+
+<Layout url='https://vidaprenatal-maternofetal-ginecologia.mx/USG-segundo-trimestre' title="USG Estructural Segundo Trimestre 18-24 sdg - Dra. Janeth Adriana García Cid" description='Se realiza la evaluación estructural anatómica del feto de manera detallada, permite identificar que se hayan formado adecuadamente todos los órganos del bebé, permite detectar alteraciones o defectos estructurales.'>
+	<main id="inicio">
+    <Loader />
+		<NavbarMovil/>
+    <Servicio 
+      title='¿En qué me beneficia realizarme este ultrasonido?' 
+      punto1='❤ Se realiza la evaluación estructural anatómica del feto de manera detallada, permite identificar que se hayan formado adecuadamente todos los órganos del bebé, permite detectar alteraciones o defectos estructurales.' 
+      punto2='❤ Se lleva a cabo la evaluación del riesgo de parto pretérmino a través de la  evaluación ultrasonográfica  vía vaginal de la longitud del cuello uterino.' 
+      punto3='❤ Evaluación de la localización placentaria por vía vaginal, ayuda a descartar  placentas de inserción baja o placentas previas  (cuando se insertan a nivel del cuello uterino).' 
+      punto4='❤ ¡Conocerás el sexo de tu bebé!'     
+      punto5=''
+      punto6=''
+      infoDesplegable1='Todas las pacientes embarazadas deben realizarse este ultrasonido entre la semana 18-24 de gestación y solo deberá ser realizado por un médico especializado y altamente capacitado, como un médico materno fetal.'
+      infoDesplegable2='Importante'
+      img='/servicios/usg-segundo.webp'
+      transition='segundoTri'
+      />
+      <Testimonios
+        img1='/servicio/usg-18/Imagen1.webp'
+        img2='/servicio/usg-18/Imagen2.webp'
+        img3='/servicio/usg-18/Imagen3.webp'
+        img4='/servicio/usg-18/Imagen4.webp'
+        img5='/servicio/usg-18/Imagen5.webp'
+        >
+        <button slot="btn" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+        <button slot="btn" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+        <button slot="btn" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
+        <button slot="btn" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8" aria-label="Slide 9"></button>
+        <div slot="item" class="carousel-item imgslider">
+          <img src='/servicio/usg-18/Imagen6.webp' class="d-block w-100 ImgSlider" alt="Slider Img">
+        </div>
+        <div slot="item" class="carousel-item imgslider">
+          <img src='/servicio/usg-18/Imagen7.webp' class="d-block w-100 ImgSlider" alt="Slider Img">
+        </div>
+        <div slot="item" class="carousel-item imgslider">
+          <img src='/servicio/usg-18/Imagen8.webp' class="d-block w-100 ImgSlider" alt="Slider Img">
+        </div>
+        <div slot="item" class="carousel-item imgslider">
+          <img src='/servicio/usg-18/Imagen9.webp' class="d-block w-100 ImgSlider" alt="Slider Img">
+        </div>
+      </Testimonios>
+        
+    <Contacto2 />
+		<Ubicacion/>
+		<RedesFlotantes/>
+    <Up />
+		<Footer/>
+	</main>
+</Layout>
+
+<style>
+  .imgslider img {
+    width: 100%;
+    height: auto;
+  }
+</style>

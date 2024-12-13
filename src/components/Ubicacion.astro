@@ -1,0 +1,94 @@
+
+<div class="container-u">
+  <div class="container-title" id="ubicacion">
+    <h2>UBICACIÓN</h2>
+    <hr class="subrayado">
+  </div>
+  <section class="container-ubicacion">
+    <iframe title="Mapa" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15062.416407894367!2d-99.1353167!3d19.2995753!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce017aadb1178b%3A0x9f5db359967c886!2sVida%20Prenatal%20(Medicina%20Materno%20Fetal)!5e0!3m2!1ses-419!2smx!4v1707601430701!5m2!1ses-419!2smx" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="direccion">
+      <img src='/logo.png' alt="logo" class="imgLogo"/>
+      <h3>Hospital Ángeles Acoxpa</h3>
+      <p>Calz Acoxpa 430, Consultorio 45-A, Coapa, Ex-Hacienda Coapa, Tlalpan, 14308 Ciudad de México</p>
+      <h3>LUNES A DOMINGO</h3>
+      <h3>8:00hrs a 20:00hrs</h3>
+    </div>
+  </section>
+</div>
+
+<!--Estilos -->
+<style>
+  .container-u {
+    width: 100%;
+    background-color: var(--rosa);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .subrayado {
+    border: 2px solid;
+    width: 70%;
+    color: white;
+    margin: 0 0 10px 0;
+    text-align: center;
+  }
+  .container-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    width: 100%;
+    padding: 10px 10px 0 10px;
+    max-width: 1200px;
+  }
+  .container-title h2 {
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+  }
+  .container-ubicacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 1rem;
+    flex-direction: column;
+    background-color: var(--rosa);
+    max-width: 1200px;
+  }
+  .container-ubicacion iframe {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: 15px;
+  }
+  .container-ubicacion .direccion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+  }
+  .container-ubicacion .direccion p {
+    color: white;
+  }
+  .direccion .imgLogo {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  @media (min-width: 768px) {
+    .container-ubicacion {
+      flex-direction: row;
+    }
+    .container-ubicacion iframe {
+      margin-right: 20px;
+      height: 350px;
+    }
+    .container-ubicacion .direccion {
+      margin-left: 30px;
+    }
+  }
+</style>

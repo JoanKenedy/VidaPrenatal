@@ -1,0 +1,265 @@
+<div class="navbar-mov">
+  <img src="src/img/logo-hor2.png" alt="logo">
+  <a id="btn-menu" class="btn-menu">
+    <i class="bi bi-list"></i>
+  </a>
+  <a id="btn-close" class="btn-menu btn-menu-close" style="display: none;">
+    <i class="bi bi-x-lg"></i>
+  </a>
+  <nav class="menu-desktop">
+    <ul class="ul-menu">
+      <li><a href="/" class="overlay-item">Inicio</a></li>
+      <li><a href="/Trayectoria" class="overlay-item">Conóceme</a></li>
+      <li>
+        <a href="/#servicios" class="overlay-item">Servicios</a>
+        <ul>
+          <li><a href="">Ultrasonidos</a></li>
+          <li><a href="">Procedimientos</a></li>
+          <li><a href="">la</a></li>
+          <li><a href="">lelee</a></li>
+        </ul>
+      </li>
+      <li><a href="" class="overlay-item">Ginecología</a></li>
+      <li><a href="#ubicacion" class="overlay-item">Ubicación</a></li>
+      <li><button><a href="tel:5511119365" target="_blank">Contacto</a></button></li>
+    </ul>
+  </nav>
+</div>
+<div class="overlay-menu" id="overlay-menu">
+  <a href="/" class="overlay-item">Inicio</a>
+  <a href="/Trayectoria" class="overlay-item">Conóceme</a>
+  <a href="#servicios" class="overlay-item">Servicios</a>
+  <a href="" class="overlay-item">Ginecología</a>
+  <a href="#ubicacion" class="overlay-item" id="btn-close-1">Ubicación</a>
+  <a href="tel:5511119365" class="overlay-item">Contacto</a>
+  <div class="rs">
+    <a target="_blank" href="https://www.facebook.com/profile.php?id=61550929773630">
+      <i class="bi bi-facebook"></i>
+    </a>
+    <a target="_blank" href="https://www.instagram.com/vidaprenatal_maternofetal/">
+      <i class="bi bi-instagram"></i>
+    </a>
+  </div>
+</div>
+
+<!--Estilos-->
+<style>
+  .navbar-mov {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(144, 212, 198, 0.493);
+  
+  }
+  .navbar-mov img {
+    max-width: 200px;
+    margin-left: 5%;
+  }
+  .btn-menu {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: var(--rosa);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5%;
+    text-align: center;
+  }
+  .btn-menu-close  {
+    background-color: var(--morado);
+  }
+  .btn-menu i {
+    font-size: 35px;
+    color: white;
+  }
+  .overlay-menu {
+    position: absolute;
+    background-color: rgba(164,204,196,0.9);
+    top: 100px;
+    right: 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    width: 0;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 99;
+    transition: all 0.5s ease 0s;
+  }
+  .overlay-menu .overlay-item {
+    text-decoration: none;
+    color: black;
+    padding: 10px 0 10px 0;
+    font-size: 20px;
+  }
+  .overlay-menu .rs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .overlay-menu .rs .bi-facebook {
+    margin-right: 15px;
+    color: blue;
+    font-size: 35px;
+  }
+  .overlay-menu .rs .bi-instagram {
+    color: var(--rosa);
+    font-size: 35px;
+  }
+  .menu-desktop {
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .menu-desktop .overlay-item {
+    text-decoration: none;
+    color: black;
+    margin-right: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+  .menu-desktop button a {
+    text-decoration: none;
+    color: black;
+  }
+  .menu-desktop button {
+    border-style: none;
+    background-color: var(--rosa);
+    border-radius: 15px;
+    padding: 5px 10px 5px 10px;
+    margin-right: 10px;
+  }
+  .menu-desktop button:hover {
+    background-color: var(--morado);
+    transition: all 0.5s linear;
+  }
+  .menu-desktop .overlay-item:hover {
+    transition: all 0.3s ease-in-out;
+    padding: 10px;
+    background-color: var(--rosa-claro);
+    border-radius: 10px;
+  }
+  /*Keyframes */
+  @keyframes open {   /*Animacion de la imagen primero es transparente al25}% del tamaño y va creciendo */
+    from {
+      opacity: 0;
+      scale: 25%;
+    }
+    to {
+      opacity: 1;
+      scale: 100%;
+    }
+  }
+  .menu-desktop ul {
+    list-style: none;
+    padding: 0;
+  }
+  .menu-desktop .ul-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+  }
+  .menu-desktop ul li {
+    position: relative;
+    float: left;
+    margin: 5px;
+  }
+  .menu-desktop ul li a {
+    display: block;
+    text-decoration: none;
+    color: black;
+  }
+  .menu-desktop ul li ul {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background-color: rgba(164,204,196,0.9);
+    display: none;
+    border-radius: 20px;
+  }
+  .menu-desktop ul li ul li { 
+    width: 100%;
+  }
+  .menu-desktop ul li ul li ul {
+    left: 200px;
+    top: 0;
+  }
+  .menu-desktop ul li:hover > ul,
+  .menu-desktop ul li:focus-within > ul {
+    display: initial;
+  }
+  /*Media query's */
+  @media (min-width: 425px) {
+    .navbar-mov img {
+      max-width: 300px;
+    }
+  }
+  @media (min-width: 768px) {
+    .menu-desktop {
+      display: flex;
+    }
+    .btn-menu, .btn-menu-close {
+      display: none;
+    }
+    .navbar-mov img {
+      margin-left: 10px;
+      max-width: 230px;
+    }
+  }
+  @media (min-width: 1024px) {
+    .menu-desktop {
+      width: 700px;
+      justify-content: space-evenly;
+    }
+    .menu-desktop .overlay-item {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .menu-desktop button a {
+      font-size: 20px;
+    }
+    .menu-desktop button {
+      padding: 10px 15px 10px 15px;
+      border-radius: 20px;
+      transition: all 0.5s linear;
+    }
+    .navbar-mov {
+      justify-content: space-between;
+    }
+    .navbar-mov img {
+      max-width: 350px;
+      margin-left: 10px;
+      padding: 0 30px;
+    }
+  }
+  @media (min-width: 1100px) {
+    .navbar-mov {
+      padding: 0 30px 0 30px;
+    } 
+  }
+</style>
+
+<!--Scripts-->
+<script>
+  const open = document.getElementById("btn-menu");
+  open.addEventListener('click', openMenu);
+  const close = document.getElementById("btn-close");
+  close.addEventListener('click', closeMenu);
+  const closeM = document.getElementById("btn-close-1");
+  closeM.addEventListener('click', closeMenu);
+  function openMenu() {
+    document.getElementById("overlay-menu").style.width = "100%";
+    document.getElementById("btn-menu").style.display = "none";
+    document.getElementById("btn-close").style.display = "block";
+    document.getElementById("btn-close").style.animation = "open 0.5s ease-in-out";
+  }
+  function closeMenu() {
+    document.getElementById("overlay-menu").style.width = "0";
+    document.getElementById("btn-menu").style.display = "block";
+    document.getElementById("btn-menu").style.animation = "open 0.5s ease-in-out";
+    document.getElementById("btn-close").style.display = "none";
+  }
+</script>

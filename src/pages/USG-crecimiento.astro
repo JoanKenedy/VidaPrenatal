@@ -1,0 +1,47 @@
+---
+import Layout from '../layouts/Layout.astro';
+import NavbarMovil from '../components/NavbarMovil.astro'
+import Footer from '../components/Footer.astro';
+import Ubicacion from '../components/Ubicacion.astro';
+import RedesFlotantes from '../components/RedesFlotantes.astro';
+import Servicio from '../components/Servicio.astro';
+import Up from '../components/Up.astro';
+import Contacto2 from '../components/Contacto2.astro';
+import Testimonios from '../components/Testimonios.astro';
+import Loader from '../components/Loader.astro';
+ 
+---
+
+<Layout url='https://vidaprenatal-maternofetal-ginecologia.mx/USG-crecimiento' title="USG de Crecimiento - Dra. Janeth Adriana García Cid" description='Evaluar que el bebé esté creciendo de forma adecuada de acuerdo a su edad gestacional'>
+	<main id="inicio">
+    <Loader />
+		<NavbarMovil/>
+    <Servicio 
+      title='¿Qué se realiza en este ultrasonido?' 
+      punto1='❤ Evaluar que el bebé esté creciendo de forma adecuada de acuerdo a su edad gestacional' 
+      punto2='❤ Permite detectar alteraciones en el crecimiento como restricción de crecimiento fetal (cuando el bebé no crece lo adecuado o lo esperado a su edad gestacional) o fetos grandes para su edad gestacional.' 
+      punto3='❤ Detección de alteraciones estructurales que pueden aparecer de forma tardía en el embarazo, es decir en el tercer trimestre del embarazo.' 
+      punto4='❤ Evaluación de la placenta.' 
+      punto5='❤ Evaluación de la cantidad de líquido amniótico' 
+      punto6=''    
+      img='/servicio/usg-crecimiento/ultrasonido-1.webp'
+      infoDesplegable1='Todas las pacientes embarazadas deben realizarse este ultrasonido después de la semana 29-32 de gestación y solo deberá ser realizado por un médico especializado y altamente capacitado, como un médico materno fetal.' 
+      infoDesplegable2='Importante'
+    />
+      <Testimonios 
+        img1='/servicio/usg-crecimiento/Imagen1.webp'
+        img2='/servicio/usg-crecimiento/Imagen2.webp'
+        img3='/servicio/usg-crecimiento/Imagen3.webp'
+        img4='/servicio/usg-crecimiento/ultrasonido-1.webp'
+        img5='/servicio/usg-crecimiento/ultrasonido-2.webp'
+      >
+
+      </Testimonios>
+    <Contacto2 />
+		<Ubicacion/>
+		<RedesFlotantes/>
+    <Up />
+		<Footer/>
+	</main>
+  <!-- http://thirsty-believe.surge.sh -->
+</Layout>

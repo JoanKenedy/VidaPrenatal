@@ -1,0 +1,277 @@
+
+<section class="hero-container" id="inicio">
+   <div class="video-contenedor">
+     <div class="container-materno">
+    <video src="/video-cel.mp4" muted controls autoplay loop class="video-cel"></video>
+    
+    <div class="container-hero">
+      <div class="texto-inicio">
+         <h2>Bienvenidos a:</h2>
+      <h1>Vida Prenatal</h1>
+      <p>Porque cada latido cuenta, cuidemos la vida desde el primer instante.</p>
+      </div>
+     
+    </div>
+  </div>
+  <div class="container-materno-2">
+   
+    <video src="/video-hero.mp4" muted controls autoplay loop class="video-compu"></video>
+    <div class="container-hero">
+      <div class="texto-inicio">
+         <h2>Bienvenidos a:</h2>
+      <h1>Vida Prenatal</h1>
+      <p>Porque cada latido cuenta, cuidemos la vida desde el primer instante.</p>
+      </div>
+     
+    </div>
+  </div>
+   </div>
+ 
+  <div class="why">
+    <h2>¿POR QUÉ SOMOS TU MEJOR OPCIÓN?</h2>
+    <hr class="subrayado">
+    <div class="container-why">
+      <img src='/doctora1.webp' alt="Doctora Adriana" class='ImgHero'/>
+      <div>
+        <p>
+          Tenemos una formación amplia en el diagnóstico prenatal utilizando el ultrasonido y 
+          diferentes pruebas para la detección de problemas fetales. En esta especialidad 
+          tratamos dos pacientes al mismo tiempo; tanto a la madre como al bebé, con los 
+          conocimientos más actualizados con el objetivo de lograr el mejor resultado posible 
+          para tu embarazo. <br> Contamos con la más moderna tecnología, llevando a cabo una 
+          evaluación individual de cada paciente y conocer el riesgo o probabilidad de que 
+          el bebé presente alguna alteración. 
+        </p>
+        <div class="conoce-des">
+          <h3>Conóce más sobre mí</h3>
+          <a href="/Trayectoria">
+            <button>Ver más</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="conoce-mov">
+      <h3>Conóce más sobre mí</h3>
+      <a href="/Trayectoria">
+        <button>Ver más</button>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!--Estilos -->
+<style>
+  .hero-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    
+  }
+ 
+  .hero-container .ImgHero {
+    width: 100%;
+    height: auto;
+    border-radius: 40px;
+    margin: 15px 0 35px 0;
+  }
+ 
+  .subrayado {
+    border: 2px solid;
+    width: 70%;
+    color: blueviolet;
+    margin: 0 0 10px 0;
+    text-align: center;
+  }
+  .hero-container h2, .hero-container h3 {
+    color: var(--morado-title);
+    text-align: center;
+  }
+  .hero-container p {
+    text-align: justify;
+  }
+  .why {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    padding: 0px 20px;
+  }
+  @keyframes show {
+    from {
+      opacity: 0;
+      scale: 25%;
+    }
+    to {
+      opacity: 1;
+      scale: 100%;
+    }
+  }
+  .why button {
+    padding: 12px 16px;
+    background-color: var(--rosa);
+    border-radius: 15px;
+    color: white;
+    border-style: none;
+    transition: all 0.3s ease-in-out;
+  }
+  .why button:hover {
+    background-color: var(--morado);
+    transition: all 0.3s ease-in-out;
+  }
+  .conoce-des, .conoce-mov {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .conoce-des {
+    display: none;
+  }
+ .container-materno{
+position:relative;
+ }
+ .container-materno .container-hero{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ .container-materno .video-cel{
+
+height:100%;
+width:100%;
+
+ }
+  .container-materno-2{
+    display: none;
+  }
+  
+.texto-inicio{
+  width: 92%;
+  backdrop-filter: blur(15px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5px;
+}
+.texto-inicio h2{
+  font-size: 20px; 
+  font-weight: 700;
+  color: var(--morado-title);
+}
+.texto-inicio h1{
+   font-size: 30px; 
+  color: var(--morado-title)
+}
+.texto-inicio p{
+   font-size: 14px; 
+  color: var(--morado-title);
+  font-weight: 700;
+}
+   
+    
+  @media (min-width: 1024px) {
+    .conoce-des {
+      display: flex;
+    }
+    .conoce-mov {
+      display: none;
+    }
+   
+  
+    .hero-container {
+      padding: 0px 0px 0px 0px ;
+    }
+ 
+  
+
+ 
+ 
+
+ 
+    .hero-container p {
+      font-size: 1.1em;
+    }
+    .hero-container .container-why .ImgHero {
+      width: 50%;
+      height: auto;
+      margin-left: 25px;
+    }
+    .why{
+      padding: 0px 80px;
+    }
+    .container-why {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: row-reverse;
+    }
+    .video-contenedor{
+      overflow-x: hidden;
+    }
+ .container-materno-2{
+  display: block;
+position:relative;
+height:0px;
+width:100vw;
+padding-top:56.25%; /* Relación: 16/9 = 56.25% */
+
+
+ }
+  .container-materno-2 .container-hero{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ .container-materno-2 .video-compu{
+position:absolute;
+height:100%;
+width:100%;
+top:0px;
+left:0px;
+
+ }
+  .container-materno{
+    display: none;
+  }
+   
+.texto-inicio{
+  width: 52%;
+  backdrop-filter: blur(15px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5px;
+}
+.texto-inicio h2{
+  font-size: 35px; 
+  font-weight: 700;
+  color: var(--morado-title);
+}
+.texto-inicio h1{
+   font-size: 55px; 
+  color: var(--morado-title)
+}
+.texto-inicio p{
+   font-size: 20px; 
+  color: var(--morado-title);
+  font-weight: 700;
+}
+
+  }
+</style>

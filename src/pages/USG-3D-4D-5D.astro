@@ -1,0 +1,45 @@
+---
+import Layout from '../layouts/Layout.astro';
+import NavbarMovil from '../components/NavbarMovil.astro'
+import Footer from '../components/Footer.astro';
+import Ubicacion from '../components/Ubicacion.astro';
+import RedesFlotantes from '../components/RedesFlotantes.astro';
+import Servicio from '../components/Servicio.astro';
+import Up from '../components/Up.astro';
+import Contacto2 from '../components/Contacto2.astro';
+import Testimonios from '../components/Testimonios.astro';
+import Loader from '../components/Loader.astro';
+
+---
+
+<Layout url='https://vidaprenatal-maternofetal-ginecologia.mx/USG-3D-4D-5D' title="Ultrasonido 3D, 4D, 5D - Dra. Janeth Adriana García Cid" description='Tecnología  de última vanguardia que nos permite definir de manera más clara características de tu bebé, sabemos  lo importante que es  para ti conocer la carita de tu bebé por lo que a través de esta tecnologías con ultrasonidos de ultima generación nos permitirá conocer de mejor manera las facciones de tu bebé, que estamos seguros te enamorarán.'>
+	<main id="inicio">
+    <Loader />
+		<NavbarMovil/>
+    <Servicio 
+      title='Qué evalúa esta tecnología?' 
+      punto1='❤ Tecnología  de última vanguardia que nos permite definir de manera más clara características de tu bebé, sabemos  lo importante que es  para ti conocer la carita de tu bebé por lo que a través de esta tecnologías con ultrasonidos de ultima generación nos permitirá conocer de mejor manera las facciones de tu bebé, que estamos seguros te enamorarán.' 
+      punto2='❤ Nos permitirá obtener una imagen del feto más real, se trata de una imagen en tiempo real, es decir, es una prueba dinámica y no una imagen estática como una fotografía. Podrás observar con detalle los rasgos de tu bebé.' 
+      punto3=''
+      punto4=''
+      punto5=''
+      punto6=''
+      img='/servicios/usg-5d.webp'
+      infoDesplegable1=''
+      infoDesplegable2=''
+      transition='USG'
+    />
+    <Testimonios 
+      img1='/Imagen1.webp'
+      img2='/Imagen2.webp'
+      img3='/Imagen3.webp'
+      img4='/ultrasonido-1.webp'
+      img5='/Imagen5.webp'
+    />
+    <Contacto2 />
+		<Ubicacion/>
+		<RedesFlotantes/>
+    <Up />
+		<Footer/>
+	</main>
+</Layout>

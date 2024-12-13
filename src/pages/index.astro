@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import NavbarMovil from '../components/NavbarMovil.astro'
+import Footer from '../components/Footer.astro';
+import Hero from	'../components/Hero.astro';
+import Servicios from '../components/Servicios.astro';
+import GaleriaConsultorio from '../components/GaleriaConsultorio.astro';
+import Contacto from '../components/Contacto.astro';
+import Ubicacion from '../components/Ubicacion.astro';
+import RedesFlotantes from '../components/RedesFlotantes.astro';
+import Up from '../components/Up.astro';
+import Loader from '../components/Loader.astro'
+--- 
+
+<Layout 
+	title="Vida Prenatal | Dra. Janeth Adriana García Cid"
+	url='https://vidaprenatal-maternofetal-ginecologia.mx'
+	description='Experiencia y dedicación para un embarazo saludable: Bienvenido a la página de la Dra. Janeth Adriana García Cid en Medicina Materno Fetal. Nos especializamos en cuidados avanzados para mamás y bebés, ofreciendo diagnósticos precisos, tratamiento experto y apoyo compasivo durante todo el embarazo. Desde consultas prenatales hasta cuidados especializados para embarazos de alto riesgo, confía en nosotros para brindarte la atención más avanzada y personalizada posible. Tu bienestar y el de tu bebé están en buenas manos con nuestro equipo líder en medicina materno fetal.'>
+	<main id="inicio">
+		<Loader />
+		<NavbarMovil/>
+		<Hero/>
+		<Servicios/>
+		<GaleriaConsultorio/>
+		<Contacto/>
+		<Ubicacion/>
+		<RedesFlotantes/>
+		<Up />
+		<Footer/>
+	</main>
+</Layout>

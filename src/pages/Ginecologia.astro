@@ -1,0 +1,187 @@
+---
+import Layout from '../layouts/Layout.astro';
+import NavbarMovil from '../components/NavbarMovil.astro'
+import Footer from '../components/Footer.astro';
+import Ubicacion from '../components/Ubicacion.astro';
+import RedesFlotantes from '../components/RedesFlotantes.astro';
+import Up from '../components/Up.astro';
+import Contacto2 from '../components/Contacto2.astro';
+import gine1 from '../img/servicio/ginecologia/ginecologia-2.png';
+import gine2 from '../img/servicio/ginecologia/ginecologia-3.jpg';
+import gine3 from '../img/servicio/ginecologia/ginecologia-4.jpg';
+import gine4 from '../img/servicio/ginecologia/ginecologia-5.webp';
+
+ 
+import { fade } from 'astro:transitions';
+import Loader from '../components/Loader.astro';
+---
+
+<Layout 
+  url='https://vidaprenatal-maternofetal-ginecologia.mx/Ginecologia'
+      title="Ginecología - Dra. Janeth Adriana García Cid"
+      description='La ginecología es una rama de la medicina que se especializa en la salud reproductiva de la mujer. Los profesionales de la ginecología, conocidos como ginecólogos, se centran en el estudio, diagnóstico y tratamiento de diversas condiciones médicas relacionadas con el sistema reproductor femenino. Esto incluye órganos como el útero, los ovarios, las trompas de Falopio y la vagina.'>
+	<main id="inicio" transition:animate={fade({ duration: '0.5s' })}> 
+    <Loader />
+		<NavbarMovil/>
+    <div class="title-img">
+      <h2>Ginecología</h2>
+    </div>
+    <section class="container-ginecologia">
+      <h2>¡Prevención y cuidado integral de la mujer!</h2>
+      <hr class="subrayado">
+      <h3>Consulta Ginecológica</h3>
+      <div class="container-planificacion">
+        <img src='/servicio/ginecologia.webp' alt="Ginecología" class="ImgGine"/>
+        <div>
+          <h4>Atenciones en:</h4>
+          <ul>
+            <li>Ovario poliquístico</li>  
+            <li>Miomas</li>
+            <li>Sangrados anormales</li>
+            <li>Infecciones cervicovaginales</li>
+          </ul> 
+        </div>       
+      </div>
+      <div class="container-grid-gineologia">
+        <div class="item-gine">
+          <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+            <h2>Toma de Papanicolao</h2>
+            <hr class="subrayado">
+          </div>
+          <div class="">
+            <img src='/servicio/ginecologia-2.webp' alt="Ginecología" class="ImgGine"/>
+          </div>
+        </div>
+        <div class="item-gine">
+          <h2>Vacuna del Virus de Papiloma Humano</h2>
+          <hr class="subrayado">
+          <div class="">
+            <img src='/servicio/ginecologia-3.webp' alt="Ginecología" class="ImgGine"/>
+          </div>
+        </div>
+      </div>
+      <h2>Métodos de Planificación Familiar </h2>
+      <hr class="subrayado">
+      <div class="container-planificacion reverse">
+        <img src='/servicio/ginecologia-4.webp' alt="Ginecología" class="ImgGine implante"/>
+        <div>
+          <h4>Atenciones en:</h4>
+          <ul>
+            <li>Implante Subdérmico</li>
+            <li>Dispositivo Intrauterino</li>
+          </ul>
+        </div>
+      </div>
+      <h2 class="title-consulta">Cada Consulta Incluye</h2>
+      <hr class="subrayado">
+      <div class="container-planificacion">
+        <img src='/servicio/ginecologia-5.webp' alt="Ginecología" class="ImgGine"/>
+        <ul>
+          <li>Revisión de Historia clínica</li>
+          <li>Toma de signos vitales, talla y peso</li>
+          <li>Rastreo ultrasonográfico de útero y de ovarios</li>
+        </ul>
+      </div>
+    </section>
+    <Contacto2 />
+		<Ubicacion/>
+		<RedesFlotantes/>
+    <Up />
+		<Footer/>
+	</main>
+</Layout>
+
+<!-- Estilos -->
+<style>
+  .container-ginecologia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 6%;
+  }
+  .container-ginecologia p, .container-ginecologia li {
+    font-size: 1.2em;
+  }
+  .subrayado {
+    border: 2px solid;
+    width: 70%;
+    color: blueviolet;
+    margin: 0 0 10px 0;
+    text-align: center;
+  }
+  .container-ginecologia h2, h3 {
+    color: var(--morado-title);
+    text-align: center;
+  }
+  .container-ginecologia h3 {
+    margin-top: 20px;
+  }
+  .title-img {
+    background-image: url(/servicio/ginecologia-1.webp);
+    background-position: center;
+    background-size: cover;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+  }
+  .title-img h2 {
+    margin-top: 40px;
+    font-size: 2.5em;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    border-radius: 40px;
+    color: black;
+  }
+  .container-planificacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .container-planificacion .ImgGine, .container-grid-gineologia .ImgGine{
+    width: 100%;
+    height: auto;
+    border-radius: 40px;
+    margin: 15px 0 35px 0;
+  }
+  .container-grid-gineologia {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .item-gine {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  .title-consulta {
+    margin-top: 20px;
+  }
+  .implante {
+    max-width: 670px;
+  }
+  @media (min-width: 768px) {
+    .container-planificacion {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    .reverse {
+      flex-direction: row-reverse;
+    }
+    .container-planificacion .ImgGine {
+      width: 50%;
+      height: auto;
+    }
+    .container-grid-gineologia {
+      grid-template-columns: repeat(2, minmax(300px, 450px));
+      gap: 30px;
+    }
+  }
+</style>

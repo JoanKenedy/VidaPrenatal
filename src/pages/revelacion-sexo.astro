@@ -1,0 +1,45 @@
+---
+import Layout from '../layouts/Layout.astro';
+import NavbarMovil from '../components/NavbarMovil.astro'
+import Footer from '../components/Footer.astro';
+import Ubicacion from '../components/Ubicacion.astro';
+import RedesFlotantes from '../components/RedesFlotantes.astro';
+import Servicio from '../components/Servicio.astro';
+import Up from '../components/Up.astro';
+import Contacto2 from '../components/Contacto2.astro';
+import Testimonios from '../components/Testimonios.astro';
+import Loader from '../components/Loader.astro';
+ 
+---
+
+<Layout url='https://vidaprenatal-maternofetal-ginecologia.mx/revelacion-sexo' title="Revelación del Sexo Fetal - Dra. Janeth Adriana García Cid" description='Sabemos que conocer el sexo de tu bebé siempre será algo muy importante para ti, ¿Sabías que ya desde el primer trimestre podremos saber el sexo de tu bebé con una precisión de casi el 90%? A partir de la semana 16 ya se confirma el sexo en un 100%.'>
+	<main id="inicio">
+    <Loader />
+		<NavbarMovil/>
+    <Servicio 
+      title='Revelación del Sexo Fetal' 
+      punto1='❤ Sabemos que conocer el sexo de tu bebé siempre será algo muy importante para ti, ¿Sabías que ya desde el primer trimestre podremos saber el sexo de tu bebé con una precisión de casi el 90%? A partir de la semana 16 ya se confirma el sexo en un 100%.' 
+      punto2='❤ La evaluación del sexo nos permitirá conocer algunas alteraciones de los genitales.'
+      punto3='❤ Es importante también para descartar alteraciones genitales o enfermedades ligadas al sexo.'
+      punto4=''
+      punto5=''
+      punto6=''
+      img='/servicios/revelacion.webp'
+      infoDesplegable1=''
+      infoDesplegable2=''
+      transition='Revelacion'
+      />
+      <Testimonios 
+        img1='/servicio/revelacion.webp'
+        img2='/servicio/Imagen2.webp'
+        img3='/servicio/Imagen3.webp'
+        img4='/servicio/Imagen4.webp'
+        img5='/servicio/Imagen5.webp'
+      />
+    <Contacto2 />
+		<Ubicacion/>
+		<RedesFlotantes/>
+    <Up />
+		<Footer/>
+	</main>
+</Layout>

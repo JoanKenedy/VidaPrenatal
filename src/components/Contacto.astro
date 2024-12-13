@@ -1,0 +1,99 @@
+<section class="contacto" id="Contacto">
+  <div class="parallax-content">
+    <h1>CONTACTO</h1>
+    <hr class="subrayado">
+    <div class="txt">
+      <h3>¡No lo pienses más!</h3>
+      <h5>Permíteme acompañarte en esta hermosa etapa.</h5>
+      <h3>LUNES A DOMINGO</h3>
+      <h3>8:00hrs a 20:00hrs</h3>
+      <div class="botones">
+        <a href="tel:5511119365" target="_blank"><button>AGENDAR CITA</button></a>
+        <a href="https://wa.me/525511119365?text=Buenas tardes, solicito información sobre " target="_blank"><button>ENVIAR MENSAJE</button></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Estilos -->
+<style>
+  .botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6%;
+    background-image: url(/bg-contacto.webp);
+    background-position: center;
+    background-size: cover;
+    margin-top: 20px;
+  }
+  .contacto h1 {
+    color: var(--morado-title);
+    text-align: center;
+    font-weight: bold;
+  }
+  .contacto h3 {
+    font-weight: bold;
+  }
+  .contacto h5 {
+    text-align: center;
+  }
+  .subrayado {
+    border: 2px solid;
+    width: 70%;
+    color: blueviolet;
+    margin: 0 0 10px 0;
+    text-align: center;
+  }
+  .contacto .txt, .parallax-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .parallax-content {
+    backdrop-filter: blur(7px);
+    border-radius: 20px;
+    width: 100%;
+  }
+  .contacto a {
+    text-decoration: none;
+  }
+  .contacto a[href="tel:5511119365"] {
+    margin-bottom: 10px;
+  }
+  .contacto button {
+    padding: 12px 16px;
+    background-color: var(--rosa);
+    border-style: none;
+    border-radius: 15px;
+    color: white;
+    transition: all 0.3s ease-in-out;
+  }
+  .contacto button:hover {
+    background-color: var(--morado);
+    transition: all 0.3s ease-in-out;
+  }
+  @media (min-width: 768px) {
+    .contacto {
+      height: 450px;
+    }
+    .botones {
+      flex-direction: row;
+    }
+    .contacto a[href="tel:5511119365"] {
+      margin-right: 10px;
+      margin-bottom: 0;
+    }
+    .parallax-content {
+      backdrop-filter: blur(15px);
+    }
+  }
+</style>
