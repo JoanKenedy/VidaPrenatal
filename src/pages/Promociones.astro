@@ -48,98 +48,98 @@ import Loader from '../components/Loader.astro'
 
 <style>
   .container-promos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    margin: 35px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin: 35px 0;
+}
 
-    & hr {
-      border: 2px solid;
-      width: 70%;
-      color: blueviolet;
-      margin: 0 0 10px 0;
-      text-align: center;
-      margin-bottom: 35px;
-    }
+.container-promos hr {
+  border: 2px solid;
+  width: 70%;
+  color: blueviolet;
+  margin: 0 0 10px 0;
+  text-align: center;
+  margin-bottom: 35px;
+}
 
-    & h1 {
-      color: var(--morado-title);
-      text-align: center;
-      font-weight: bolder;
-    }
+.container-promos h1 {
+  color: var(--morado-title);
+  text-align: center;
+  font-weight: bolder;
+}
 
-    & .grid-promos {
-      display: grid;
-      place-content: center;
-      place-items: center;
-      grid-template-columns: repeat(1, 1fr);
-      width: 100%;
-      max-width: 1280px;
-      padding: 0 1rem;
-      gap: 20px;
+.container-promos .grid-promos {
+  display: grid;
+  place-content: center;
+  place-items: center;
+  grid-template-columns: repeat(1, 1fr);
+  width: 100%;
+  max-width: 1280px;
+  padding: 0 1rem;
+  gap: 20px;
+}
 
-      & .item-promo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 100%;
+.container-promos .grid-promos .item-promo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
 
-        & img {
-          width: 100%;
-          border-radius: 10px;
-        }
+.container-promos .grid-promos .item-promo img {
+  width: 100%;
+  border-radius: 10px;
+}
 
-        & a:nth-last-child(1) {
-          padding: 10px 15px;
-          border-radius: 5px;
-          background-color: var(--rosa-claro);
-          text-decoration: none;
-          color: white;
-          margin-top: 15px;
-          transition: all 0.2s linear;
+.container-promos .grid-promos .item-promo a:nth-last-child(1) {
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: var(--rosa-claro);
+  text-decoration: none;
+  color: white;
+  margin-top: 15px;
+  transition: all 0.2s linear;
+}
 
-          & i {
-            color: white;
-          }
-        }
-        & a:nth-last-child(1):hover {
-          transition: all 0.2s linear;
-          transform: scale(1.1);
-        }
-      }
-    }
-  } 
+.container-promos .grid-promos .item-promo a:nth-last-child(1) i {
+  color: white;
+}
 
-  @media (min-width: 768px) {
-    .container-promos {
+.container-promos .grid-promos .item-promo a:nth-last-child(1):hover {
+  transition: all 0.2s linear;
+  transform: scale(1.1);
+}
+
+@media (min-width: 768px) {
+  .container-promos {
     margin: 45px 0;
-
-    & hr {
-      margin-bottom: 45px;
-    }
-
-    & .grid-promos {
-      grid-template-columns: repeat(2, minmax(350px, 450px));
-      gap: 40px;
-
-      & .item-promo {
-
-        & img {
-          transition: all 0.2s linear;
-        }
-
-        & img:hover {
-          transition: all 0.2s linear;
-          transform: rotate(3deg);
-        }
-
-        & a:nth-last-child(2):hover ~ a {
-          transform: scale(1.1);
-      }
-    }
-  } 
   }
+
+  .container-promos hr {
+    margin-bottom: 45px;
+  }
+
+  .container-promos .grid-promos {
+    grid-template-columns: repeat(2, minmax(350px, 450px));
+    gap: 40px;
+  }
+
+  .container-promos .grid-promos .item-promo img {
+    transition: all 0.2s linear;
+  }
+
+  .container-promos .grid-promos .item-promo img:hover {
+    transition: all 0.2s linear;
+    transform: rotate(3deg);
+  }
+
+  .container-promos .grid-promos .item-promo a:nth-last-child(2):hover ~ a {
+    transform: scale(1.1);
+  }
+}
+
 </style>
